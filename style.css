@@ -1,0 +1,636 @@
+/* F.about-listl-page layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(280deg, rgb(15 63 104), rgb(2 31 62), rgb(1 10 37));
+    color: white;
+}
+
+/* Flexbox layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar (Fixed Left Partition) */
+.sidebar {
+    width: 250px;
+    background-color: rgb(1,10,37, 0.8);
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+    margin-right: 100px;
+    border-right:  0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+/* .sidebar h3{
+    font-size: 12px;
+    font-weight: 100;
+    text-align: center;
+    color: rgb(222, 221, 221);
+} */
+
+.sidebar h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(248 200 148);
+    /* color: #ffffff; */
+    margin-top: 10px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    padding-bottom: 0px;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 5px 0 20px 0;
+}
+
+.profile-photo {
+    width: 50%;
+    /* height: 10%; */
+    border-radius: 100%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.sidebar nav .left-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav .left-list li {
+    margin: 15px 0;
+}
+
+.sidebar nav .left-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Main Content (Right Partition, Scrollable) */
+.content {
+    background-image: linear-gradient(280deg, rgb(15 63 104), rgb(2 31 62), rgb(1 10 37));
+    margin-left: 290px;
+    padding: 30px;
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 100vh;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    /* border-bottom: 2px solid white; */
+    padding-bottom: 5px;
+}
+
+/* Home Section */
+/* Home Section */
+#home {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/* Overlapping two divs */
+.intersection {
+    /* background-color: white; */
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    overflow: hidden;
+}
+
+.bg-texts {
+    /* background-color: green; */
+    width: 80vw;
+    height: auto;
+    position: absolute;
+    font-size: 15vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0.1;
+    font-weight: bold;
+}
+
+.intersection .intro {
+    /* background-color: red; */
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    /* opacity: 0.9; */
+}
+
+.intro-p {
+    margin: 0;
+    font-size: 3vw;
+    white-space: nowrap;
+    font-weight: 100;
+}
+
+.name-p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 5vw;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 
+                 0 0 20px rgba(255, 255, 255, 0.2), 
+                 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Home Content */
+.home-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.role {
+    font-size: 2vw;
+    font-weight: bold;
+    color: rgb(248 200 148);
+    margin-top: 10px;
+}
+
+.description {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 15px;
+}
+
+/* Floating Container */
+.floating-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevents interaction */
+    z-index: 0;
+}
+
+/* Floating Dots */
+.floating-dot {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 15px;
+    height: auto;
+    opacity: 0.7;
+    animation: floatAnimation 6s infinite ease-in-out alternate;
+}
+
+
+/* Keyframe Animation */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); opacity: 0.5; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(0px); opacity: 0.5; }
+}
+
+/* Floating Dots - Left Side (New Additions) */
+.floating-dot.one { top: 3%; left: 1%; animation-duration: 5s; }
+.floating-dot.two { top: 23%; left: 8%; animation-duration: 6s; }
+/* .floating-dot.three { top: 28%; left: 2%; animation-duration: 7s; } */
+.floating-dot.four { top: 38%; left: 0%; animation-duration: 8s; }
+.floating-dot.five { top: 55%; left: 25%; animation-duration: 5.5s; }
+.floating-dot.six { top: 65%; left: 20%; animation-duration: 6.5s; }
+.floating-dot.seven { bottom: 8%; left: 20%; animation-duration: 7.5s; }
+.floating-dot.eight { top: 40%; left: 15%; animation-duration: 8.5s; }
+.floating-dot.nine { bottom: 80%; left: 30%; animation-duration: 9s; }
+.floating-dot.ten { bottom: 20%; left: 5%; animation-duration: 10s; }
+.floating-dot.eleven { top: 80%; left: 0%; animation-duration: 10s; }
+.floating-dot.twelve { top: 73%; left: 25%; animation-duration: 10s; }
+.floating-dot.thirteen { top: 60%; left: 2%; animation-duration: 10s; }
+.floating-dot.fourteen { top: 57%; left: 12%; animation-duration: 10s; }
+/* .floating-dot.fifteen { bottom: 85%; left: 5%; animation-duration: 10s; } */
+/* .floating-dot.sixteen { bottom: 85%; left: 5%; animation-duration: 10s; } */
+/* .floating-dot.seventeen { bottom: 85%; left: 5%; animation-duration: 10s; } */
+/* .floating-dot.eighteen { bottom: 85%; left: 5%; animation-duration: 10s; } */
+
+.non-floating-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* Styling the Non-Floating Icons */
+.non-floating-icon {
+    position: absolute;
+    width: 20vw; /* Adjust size */
+    height: auto;
+    opacity: 0.7;
+}
+
+#grid-element{
+    width: 8vw;
+    top: 0%;
+    right: 0%;
+    color: #f8c894;
+    opacity: 0.4;
+}
+
+/* ABOUT ME SECTION */
+/* Wrapper text */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Animated Text Effect */
+.wrapper {
+    font-size: 3vw;
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: screen;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Inverted Effect */
+.wrapper.invert span {
+    color: black;
+}
+
+.wrapper.invert span::before {
+    -webkit-text-stroke: 0.1em var(--color);
+}
+
+/* Text Styling */
+.wrapper span {
+    --color: rgb(248 200 148);
+    /* font-family: Impact, 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-weight: 700;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    color: var(--color);
+    letter-spacing: -0.005em;
+}
+
+/* Stroke Effect */
+.wrapper span::before, 
+.wrapper span::after {
+    content: attr(data-text);
+    display: block;
+    position: relative;
+    padding: 0 0.1em;
+    z-index: 1;
+}
+
+.wrapper span::before {
+    position: absolute;
+    /* -webkit-text-stroke: 0.1em black; */
+    z-index: 0;
+}
+
+/* Offset Text for Effect */
+.wrapper span:first-child {
+    transform: translate(-0.255em, -0.25em);
+    opacity: 0.2;
+}
+
+.wrapper span:last-child {
+    --color: white;
+    transform: translate(0.255em, 0.25em);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 
+                 0 0 20px rgba(255, 255, 255, 0.1), 
+                 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* About Text */
+/* #about p {
+    font-size: 1.5vw;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        font-size: 10vw;
+    }
+    
+    #about p {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        font-size: 12vw;
+    }
+
+    #about p {
+        font-size: 4vw;
+    }
+} */
+
+/* About Me Section */
+#about {
+    background: #0a192f; /* Dark background */
+    color: #ffffff; /* White text */
+    margin-top: 8%;
+    padding: 60px 15%;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgb(248 200 148); /* Highlighted title */
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: rgb(248 200 148);
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+.highlight {
+    color: rgb(248 200 148);
+    font-weight: 600;
+}
+
+/* .highlight {
+    background: rgb(248, 200, 148, 0.2);
+    color: #64ffda;
+    font-weight: 600;
+    padding: 2px 6px; 
+    border-radius: 5px;
+} */
+
+.closing {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.connect {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        padding: 60px 10%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p, .about-list {
+        font-size: 1rem;
+    }
+}
+
+/* PROJECT SECTION */
+#projects {
+    text-align: center;
+    padding: 50px 5%;
+    color: white;
+}
+
+/* Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    /* padding: 1% 6% 6% 6%; */
+    padding: 0px;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Project Title */
+.project-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+/* Separator Line */
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0px 0px 0px 0px;
+}
+
+/* Project Images */
+.project-images {
+    position: relative;
+    /* width: fit-content; */
+    width: 75%;
+    margin: auto;
+    padding: 20px 10px 10px 10px;
+}
+
+.project-images img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 3; /* Keeps the image on top */
+    border-radius: 8px;
+    
+}
+
+/* Rectangles Container */
+.rectangle {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Base Styles for Rectangles */
+.rectangle div {
+    position: absolute;
+    /* width: 90%;
+    height: 100%; */
+    background: rgba(255, 255, 255, 0.1); /* Light transparency */
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+/* First Rectangle (Furthest Back) */
+.rectangle-1 {
+    width: 88%;
+    height: 90%;
+    bottom: vw;
+    left: 2.4vw;
+    z-index: 0;
+    background: rgba(255, 255, 255, 0.879);
+}
+
+/* Second Rectangle (Middle) */
+.rectangle-2 {
+    width: 80%;
+    height: 95%;
+    bottom: 1.8vw;
+    left: 4vw;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Third Rectangle (Closest) */
+.rectangle-3 {
+    bottom: 5px;
+    left: 5px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* .project-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    padding: 12px 12px 12px 12px;
+    border-radius: 10px;
+}
+
+.project-images img {
+    width: 28vw;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 
+        20px 4px 6px rgb(0, 0, 0), 
+        0 8px 15px #fa0000, 
+        0 12px 25px rgba(234, 0, 255, 0);
+} */
+
+/* .rectangle-1{
+    width: 30vw;
+    background-color: #ffffff;
+    height: 20vw;
+    border-radius: 10px;
+} */
+
+/* .project-images img:hover {
+    transform: scale(1.05);
+} */
+
+/* Project Info */
+.project-info {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* GitHub Arrow Link */
+.project-link {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background: rgb(248 200 148);
+    color: black;
+    padding: 8px 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.project-link:hover {
+    background: white;
+    color: black;
+}
