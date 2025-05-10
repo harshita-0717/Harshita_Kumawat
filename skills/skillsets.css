@@ -1,0 +1,137 @@
+#skillsets-container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #f4f4f4;
+}
+
+
+/* Main Part */
+.main-container {
+  /* background-color: #0f0c1f; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0;
+  margin-top: 0%;
+}
+
+.rings-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  /* margin: 4rem auto 0; */
+  perspective: 800px;
+}
+
+.rings {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  transform-style: preserve-3d;
+  transform: rotateX(75deg);
+  animation: rotate 50s linear infinite;
+  margin: 0 auto;
+}
+
+.ring {
+  position: absolute;
+  border: 1px solid rgba(124, 90, 255, 0.3);
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  box-shadow: 0 0 10px 1px rgba(124, 90, 255, 0.3);
+}
+
+.ring3 {
+  width: 360px;
+  height: 360px;
+  margin-left: -180px;
+  margin-top: -180px;
+}
+
+.orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+  margin-top: -48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #4c2ed9 40%, transparent 70%);
+  box-shadow: 0 0 40px 15px #4c2ed9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.orb svg {
+  width: 48px;
+  height: 48px;
+  stroke: #e9e9ff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(124, 90, 255, 0.3);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 2px #7c5aff);
+  transform-style: preserve-3d;
+}
+
+.skills-container {
+  max-width: 400px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skill {
+  font-size: 0.875rem;
+  color: #b3b3b3;
+  background: #1a1633;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.skill.highlight {
+  color: #a27aff;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(75deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(75deg) rotateZ(360deg);
+  }
+}
