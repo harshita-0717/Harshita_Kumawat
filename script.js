@@ -86,4 +86,13 @@ window.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error loading projects:', error));
 });
 
+// For Journey Section
+window.addEventListener('DOMContentLoaded', () => {
+    fetch('./journey/journey.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('journey-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading journey:', error));
+});
 

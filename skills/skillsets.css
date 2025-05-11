@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  border: 1px solid #f4f4f4;
 }
 
 
@@ -40,7 +39,7 @@
 
 .ring {
   position: absolute;
-  border: 1px solid rgba(124, 90, 255, 0.3);
+  border: 1px solid rgb(139, 132, 201);
   border-radius: 50%;
   box-sizing: border-box;
   top: 50%;
@@ -124,7 +123,7 @@
 }
 
 .skill.highlight {
-  color: #a27aff;
+  color: #8b84c9;
 }
 
 @keyframes rotate {
