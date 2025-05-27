@@ -10,22 +10,21 @@
     <link rel="stylesheet" href="contacts.css">
 </head>
 <body class="bg-gray-900 text-white flex">
-    <aside id="sidebar" class="md:block">
+    <aside id="sidebar" class="sidebar">
         <div class="sidebar-content">
-            <img src=".\assets\profiles2.jpeg" alt="Profile" class="sidebar-image">
-            <a href="#" class="text-xl font-semibold text-white block py-3">Harshita Kumawat</a>
-            <nav class="space-y-2">
-                <a href="#home" class="nav-link text-gray-300 hover:text-gray-200 transition duration-300 active block py-2 sidebar-content rounded-md">Home</a>
-                <a href="#about" class="nav-link text-gray-300 hover:text-gray-200 transition duration-300 block py-2 sidebar-content rounded-md">About</a>
-                <a href="#skills" class="nav-link text-gray-300 hover:text-gray-200 transition duration-300 block py-2 sidebar-content rounded-md">Skills</a>
-                <a href="#projects" class="nav-link text-gray-300 hover:text-gray-200 transition duration-300 block py-2 sidebar-content rounded-md">Projects</a>
-                <a href="#experience" class="nav-link text-gray-300 hover:text-gray-200 transition duration-300 block py-2 sidebar-content rounded-md">Experience</a>
+            <img src="./assets/profiles2.jpeg" alt="Profile" class="sidebar-image">
+            <a href="#" class="side-name">Harshita Kumawat</a>
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
             </nav>
-             <button id="dark-mode-toggle" class="text-gray-300 hover:text-white transition duration-300 block py-2 sidebar-content rounded-md mt-4 w-full text-left">
-                Dark Mode
-            </button>
+            <button id="dark-mode-toggle" class="dark-toggle">Dark Mode</button>
         </div>
     </aside>
+
 
     <div id="content" class="">
         <header>
@@ -57,7 +56,7 @@
                                 <img src="assets/mail.svg" alt="Email Icon" class="icon-svg" />
                                 <span>Email</span>
                             </a>
-                            <a href="assets/Your_Resume.pdf" class="icon-link" target="_blank" rel="noopener noreferrer">
+                            <a href="assets/Harshita_Kumawat_Resume.pdf" class="icon-link" target="_blank" rel="noopener noreferrer">
                                 <img src="assets/resume.svg" alt="Resume Icon" class="icon-svg" />
                                 <span>Resume</span>
                             </a>
@@ -74,45 +73,16 @@
                 </div>
             </section>
 
-            <!-- About Me -->
-            <section id="about" class="container mx-auto sidebar-content py-20 flex flex-col md:flex-row items-center gap-12">
-                <div class="mid-about">
-                    <div class="about-content-wrapper">
-                        <h2 class="text-3xl font-semibold text-white mb-4">About Me</h2>
-                        <p class="text-gray-300 mb-6">
-                            I'm Harshita Kumawat, a BTech Cybersecurity student passionate about ethical hacking,
-                            secure systems, and web development. With a strong foundation in Python, C, C++, DSA,
-                            and security principles, I thrive on exploring vulnerabilities, securing applications,
-                            and building impactful solutions.
-                        </p>
-                        <p class="text-gray-300 mb-6">
-                            My journey into cybersecurity began with a deep curiosity about how systems work and
-                            how they can be secured from cyber threats. Over time, I have explored penetration
-                            testing, secure coding, and data protection techniques, blending my development skills
-                            with cybersecurity expertise.
-                        </p>
-                        <h3 class="text-2xl font-semibold text-white mb-4">What I'm Working On</h3>
-                        <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
-                            <li>
-                                Enhanced Malware Detection System - Developing a system to identify and prevent
-                                malware threats using advanced security techniques.
-                            </li>
-                            <li>
-                                Learning Ethical Hacking on Udemy - Exploring penetration testing, security
-                                vulnerabilities, and ethical hacking tools to strengthen my expertise.
-                            </li>
-                        </ul>
-                        <p class="text-gray-300 mb-6">
-                            I believe that security is not just about defense but also about innovation. My goal
-                            is to contribute to cutting-edge cybersecurity solutions that protect digital
-                            infrastructures and ensure data integrity. I am eager to collaborate on challenging
-                            security projects and make an impact in the cybersecurity industry.
-                        </p>
-                        <p class="text-gray-300">
-                            Let's connect and make the digital world safer!
-                        </p>
-                    </div>
+
+            <!-- About me -->
+             <section id="about" class="container mx-auto sidebar-content py-20">
+                <div class="two">
+                    <h1 class="skill-heading">About Me
+                        <span class="skill-span"></span>
+                    </h1>
                 </div>
+                <!-- This is where the skillset.html content will be injected -->
+                <div id="about-container"></div>
             </section>
 
 

@@ -65,6 +65,15 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
         window.addEventListener('scroll', updateActiveNavLink);
 
 
+// For About me Section
+window.addEventListener('DOMContentLoaded', () => {
+    fetch('./about/aboutme.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('about-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading skills:', error));
+});
 
 // For SkillSets Section
 window.addEventListener('DOMContentLoaded', () => {

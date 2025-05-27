@@ -1,84 +1,132 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Example Project</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <meta charset="UTF-8">
+  <title>Project Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href=".\projects\project.css">
 </head>
 <body>
-  <!-- Top project container -->
-  <section class="project-container project-container-top" style="margin-bottom: 2rem;">
-    <!-- Text container with overlap -->
-    <div class="text-container text-container-left">
-      <p class="project-label" style="transform: translateX(10%);">
-        Featured Project
-      </p>
-      <h2 class="project-title" style="transform: translateX(10%);">
-        Example Project
-      </h2>
-      <p class="project-description project-description-left">
-        A web app for visualizing personalized Spotify data. View your top
-        artists, top tracks, recently played tracks, and detailed audio
-        information about each track. Create and save new playlists of
-        recommended tracks based on your existing playlists and more.
-      </p>
-      <div class="icon-container icon-container-left" style="transform: translateX(10%);">
-        <i class="fas fa-snowflake animate-spin"></i>
-        <i class="fas fa-snowflake animate-spin"></i>
+
+  <div class="project-section">
+    <!-- Project 1 - Odd (Image Right) -->
+    <div class="project-row">
+      <div class="text-block">
+        <span class="project-tag">CRYPTOGRAPHY</span>
+        <h2 class="project-title">Neural Cryptography System with Adversarial Training & CNN</h2>
+        <p class="project-description">
+          Worked on developing a secure communication simulation using CNNs for encryption/decryption.
+          Trained adversarial neural networks (Alice, Bob, Eve) using gradient descent to enhance data
+          confidentiality through learned cryptographic behavior.
+        </p>
+        <div class="spin-icons">
+          <i class="fas fa-snowflake animate-spin"></i>
+          <i class="fas fa-snowflake animate-spin"></i>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-glow"></div>
+        <img src="/assets/CNN.jpg" alt="Project Image" class="project-img">
       </div>
     </div>
 
-    <!-- Image container with rectangular background and glow -->
-    <div class="image-container">
-      <!-- Rectangular background behind image -->
-      <div class="image-bg"></div>
-      <!-- Glow effect -->
-      <div class="image-glow"></div>
-      <img
-        alt="Screenshot of Example Project showing a web app interface"
-        class="project-image"
-        src="https://storage.googleapis.com/a1aa/image/d7149321-e146-427b-13a6-b509bb867bea.jpg"
-      />
-    </div>
-  </section>
-
-  <!-- Bottom project container -->
-  <section class="project-container project-container-bottom">
-    <!-- Image container with rectangular background and glow -->
-    <div class="image-container image-container-right">
-      <!-- Rectangular background behind image -->
-      <div class="image-bg image-bg-right"></div>
-      <!-- Glow effect -->
-      <div class="image-glow image-glow-right"></div>
-      <img
-        alt="Screenshot of Example Project showing a web app interface"
-        class="project-image"
-        src="https://storage.googleapis.com/a1aa/image/dd0202dc-80ee-4d29-079d-6aca0fbc13fd.jpg"
-      />
-    </div>
-
-    <!-- Text container with overlap -->
-    <div class="text-container text-container-right">
-      <p class="project-label" style="transform: translateX(-8%); margin-left: auto;">
-        Featured Project
-      </p>
-      <h2 class="project-title" style="transform: translateX(-8%); margin-left: auto;">
-        Example Project
-      </h2>
-      <p class="project-description project-description-right">
-        A web app for visualizing personalized Spotify data. View your top
-        artists, top tracks, recently played tracks, and detailed audio
-        information about each track. Create and save new playlists of
-        recommended tracks based on your existing playlists and more.
-      </p>
-      <div class="icon-container icon-container-right">
-        <i class="fas fa-snowflake animate-spin"></i>
-        <i class="fas fa-snowflake animate-spin"></i>
+    <!-- Project 2 - Even (Image Left) -->
+    <div class="project-row reverse">
+      <div class="text-block">
+        <span class="project-tag">RESEARCH & ANALYSIS</span>
+        <h2 class="project-title">Comparative Analysis of E-Waste Management of Emerging vs Developed Economic Countries</h2>
+        <p class="project-description">
+          Performed a data-driven comparison of e-waste policies in emerging vs. developed nations. Identified sustainability challenges and proposed policy-based, scalable waste solutions with environmental and health impacts in focus.
+        </p>
+        <div class="spin-icons">
+          <i class="fas fa-snowflake animate-spin"></i>
+          <i class="fas fa-snowflake animate-spin"></i>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-glow"></div>
+        <img src="/assets/e-waste.png" alt="Project Image" class="project-img">
       </div>
     </div>
-  </section>
 
-  <script src="project.js"></script>
+    <!-- Project - 3 -->
+     <div class="project-row">
+      <div class="text-block">
+        <span class="project-tag">RESEARCH & ANALYSIS</span>
+        <h2 class="project-title">Sniff, Learn, detect: A Lightweight ML-Based Intrusion Detection Method Using Packet Features</h2>
+        <p class="project-description">
+          Built an intelligent malware detection system by analyzing live network traffic. Used machine learning to detect anomalies and predict malware behaviors for real-time security improvements.
+        </p>
+        <div class="spin-icons">
+          <i class="fas fa-snowflake animate-spin"></i>
+          <i class="fas fa-snowflake animate-spin"></i>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-glow"></div>
+        <img src="/assets/malware.png" alt="Project Image" class="project-img">
+      </div>
+    </div>
+
+    <!-- Project 4 - Even (Image Left) -->
+    <div class="project-row reverse">
+      <div class="text-block">
+        <span class="project-tag">WEB DEVELOPMENT</span>
+        <h2 class="project-title"> Spardha - College Sports Fest Website</h2>
+        <p class="project-description">
+          Led frontend development for a responsive college fest site. Integrated registration APIs, email authentication, and Excel-based tracking for participants. Deployed on Vercel with college domain hosting.
+        </p>
+        <div class="spin-icons">
+          <i class="fas fa-snowflake animate-spin"></i>
+          <i class="fas fa-snowflake animate-spin"></i>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-glow"></div>
+        <img src="/assets/spardha.png" alt="Project Image" class="project-img">
+      </div>
+    </div>
+
+    <!-- Project - 3 -->
+     <div class="project-row">
+      <div class="text-block">
+        <span class="project-tag">CYBERSECURITY</span>
+        <h2 class="project-title"> Secure Chat System - chat-It</h2>
+        <p class="project-description">
+          Designed a secure chat app with end-to-end AES encryption, OTP login, group messaging, and real-time sync. Integrated Firebase for authentication and chat.io for scalable communication handling.
+        </p>
+        <div class="spin-icons">
+          <i class="fas fa-snowflake animate-spin"></i>
+          <i class="fas fa-snowflake animate-spin"></i>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-glow"></div>
+        <img src="/assets/chat.jpg" alt="Project Image" class="project-img">
+      </div>
+    </div>
+
+    <!-- Project 4 - Even (Image Left) -->
+    <div class="project-row reverse">
+      <div class="text-block">
+        <span class="project-tag">FUNDAMENTALS OF AUTOMATION ENGINEERING</span>
+        <h2 class="project-title"> Windmill: Swift Blades - Storm Safety Automation</h2>
+        <p class="project-description">
+          Engineered an automated windmill system to reduce storm damage. Utilized relay-based blade adjustment and sliding pole logic to dynamically minimize mechanical tension during extreme weather.
+        </p>
+        <div class="spin-icons">
+          <i class="fas fa-snowflake animate-spin"></i>
+          <i class="fas fa-snowflake animate-spin"></i>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-glow"></div>
+        <img src="/assets/windmill.jpg" alt="Project Image" class="project-img">
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
